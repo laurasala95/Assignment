@@ -13,5 +13,41 @@
 
     <body>
         <h1>Carousel Demo Page</h1>
+        <div id="myCarousel1"></div>
+        <div id="myCarousel2"></div>
+
+        <script type="text/javascript">
+            const options1 = {
+                container: 'myCarousel1',
+                icon: 'collections',
+                title: 'Fresh and just uploaded content >',
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis condimentum nisl a tristique.',
+                fetchCards: function (chunkSize) {
+                    // function that returns "chunkSize" card objects to be displayed in the carousel. Each card object is structured as follows:
+                    new Carousel(options1);
+                }
+            };
+            const carousel1 = new Carousel(options1);
+        </script>
+
+        <script type="text/javascript">
+            const options2 = {
+                container: 'myCarousel2',
+                icon: 'event_seat',
+                title: 'Another carousel instance title',
+                subtitle: 'Phasellus egestas at diam ut viverra. Curabitur sed turpis faucibus, tempus mauris at.',
+                fetchCards: function (chunkSize) {
+                    // function that returns "chunkSize" card objects to be displayed in the carousel. Each card object is structured as follows:
+                    return {
+                        image: 'https://picsum.photos/200/300?random=2',
+                        type: 'news',
+                        duration: 3600,
+                        title: 'Just another title',
+                        cardinality: 'collection'
+                    }
+                }
+            };
+            const carousel2 = new Carousel(options2);
+        </script>
     </body>
 </html>
