@@ -27,6 +27,7 @@ class Carousel {
             <div class="icon"><i class="material-icons">${this.icon}</i></div>
             <div class="description">
                 <h4 class="title">${this.title}</h4>
+                <p class="subtitle">${this.subtitle}</p>
             </div>
         `;
         this.div.appendChild(div);
@@ -44,52 +45,52 @@ class Carousel {
             },
             {
                 image: "https://picsum.photos/200/300?random=2",
-                type: 'video',
-                duration: 3600,
+                type: 'playlist',
+                duration: 1000,
                 title: 'Title 2',
-                cardinality: 'single'
+                cardinality: 'collection'
             },
             {
                 image: "https://picsum.photos/200/300?random=3",
-                type: 'video',
-                duration: 3600,
+                type: 'playlist',
+                duration: 2300,
                 title: 'Title 3',
-                cardinality: 'single'
+                cardinality: 'collection'
             },
             {
                 image: "https://picsum.photos/200/300?random=4",
-                type: 'video',
-                duration: 3600,
+                type: 'news',
+                duration: 4600,
                 title: 'Title 4',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=5",
-                type: 'video',
-                duration: 3600,
+                type: 'playlist',
+                duration: 1500,
                 title: 'Title 5',
-                cardinality: 'single'
+                cardinality: 'collection'
             },
             {
                 image: "https://picsum.photos/200/300?random=6",
-                type: 'video',
-                duration: 3600,
+                type: 'other',
+                duration: 800,
                 title: 'Title 6',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=7",
-                type: 'video',
-                duration: 3600,
+                type: 'news',
+                duration: 1600,
                 title: 'Title 7',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=8",
-                type: 'video',
-                duration: 3600,
+                type: 'playlist',
+                duration: 2400,
                 title: 'Title 8',
-                cardinality: 'single'
+                cardinality: 'collection'
             },
             {
                 image: "https://picsum.photos/200/300?random=9",
@@ -113,9 +114,15 @@ class Carousel {
         HTML += '<div class="container-cards">'
         this.cards.forEach(item => {
            HTML += `
-                <div class="single-card">
+                <div class="single-card" id=${item.cardinality}>
                     <div class="image">
                         <img src="${item.image}" />
+                    </div>
+                    <div class="type">
+                        <p>${item.type}</p>
+                    </div>
+                    <div class="duration">
+                        <p>${this.convertDuration(item.duration)}</p>
                     </div>
                     <h5 class="title">${item.title}</h5>
                 </div>
@@ -130,6 +137,14 @@ class Carousel {
         div.innerHTML = HTML;
 
         this.div.appendChild(div);
+    }
+
+    convertDuration (seconds){
+        let hours = Math.floor(seconds / 3600);
+        seconds %= 3600;
+        let minutes = Math.floor(seconds / 60);
+
+        return hours+"h "+minutes+"m";
     }
 
     // HANDLING ARROWS CLICK

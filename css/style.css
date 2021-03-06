@@ -1,15 +1,19 @@
 /* GENERAL STYLING */
 * {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* TEXT STYLING */
-.txt-dark {
-    color: #1d2424;
+/* HEADINGS STYLING */
+h1 {
+    text-align: center;
+    padding: 20px 0;
 }
-.txt-blue {
-    color: #69849b;
-}
-.txt-white {
-    color: #fff;
+
+@media screen and (max-width: 768px) {
+    h1 {
+        text-align: center;
+    }
 }

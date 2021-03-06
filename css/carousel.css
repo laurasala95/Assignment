@@ -1,7 +1,21 @@
 /* GENERAL CAROUSEL STYLING */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.carousel-container > .icon i {
+    font-size: 22px;
+    color: #fff;
+    background: #3d6a66;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    display: inline-block;
+}
 .container-cards {
     display: flex;
-    padding: 20px 40px;
+    padding: 40px 0;
     overflow-x: auto;
 }
 .container-cards-arrows {
@@ -16,11 +30,77 @@
     scrollbar-width: none;
 }
 
+/* DESCRIPTION STYLING */
+.title {
+    color: #3d6a66;
+    font-weight: 800;
+    font-size: 17px;
+}
+.subtitle {
+    color: #877A90;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 /* SINGLE CARD STYLING */
 .single-card {
     margin: 0 1rem;
     flex-basis: 200px;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.2);
+    position: relative;
+    border-radius: 3px;
 }
+.single-card .image {
+    height: 200px;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+.single-card .type, .single-card .duration {
+    position: absolute;
+    top: 182px;
+    height: 18px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 8px;
+    color: #fff;
+    font-weight: 300;
+}
+.single-card .type {
+    left: 0;
+    border-radius: 0 3px 0 0;
+    text-transform: uppercase;
+}
+.single-card .duration {
+    right: 0;
+    border-radius: 3px 0 0 0;
+}
+.single-card h5 {
+    padding: 20px 0 20px 10px;
+    color: #3d6a66;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#collection::after, #collection::before {
+    content: '';
+    height: 4px;
+    display: block;
+    position: absolute;
+    border-radius: 0 0 3px 3px;
+}
+#collection::before {
+    width: 96%;
+    background:#3d6a66;
+    top: 260px;
+    left: 4px;
+}
+#collection::after {
+    width: 94%;
+    background: #2D4E4B;
+    top: 264px;
+    left: 6px;
+}
+
 
 /* ARROWS STYLING */
 .arrow-right, .arrow-left {
@@ -33,6 +113,7 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+    margin: 0 5px;
 }
 .arrow-right:hover, .arrow-left:hover, .arrow-right:focus, .arrow-left:focus {
     background: #3d6a66;
@@ -45,6 +126,10 @@
 
 
 @media screen and (max-width: 768px) {
+    .carousel-container {
+        display: block;
+        text-align: center;
+    }
     .container-cards {
         padding: 20px 0;
     }
