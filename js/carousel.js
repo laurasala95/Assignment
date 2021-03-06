@@ -1,5 +1,5 @@
 class Carousel {
-    // CREATING THE CONSTRUCTOR TO THE DISPLAY THE CAROUSEL
+    // CREATING THE CONSTRUCTOR TO DISPLAY THE CAROUSEL
     constructor(options) {
         this.container = options.container;
         this.icon = options.icon;
@@ -15,8 +15,6 @@ class Carousel {
         this.arrowRight = this.div.querySelector(".arrow-right");
         this.arrowLeft = this.div.querySelector(".arrow-left");
         this.arrowListener();
-        this.scrollRightLoop=null;
-        this.scrollLeftLoop=null;
     }
 
     // DISPLAYING CAROUSELS
@@ -139,6 +137,7 @@ class Carousel {
         this.div.appendChild(div);
     }
 
+    // CONVERTING SECONDS TO HOURS AND MINUTES
     convertDuration (seconds){
         let hours = Math.floor(seconds / 3600);
         seconds %= 3600;
