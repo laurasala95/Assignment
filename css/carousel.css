@@ -42,3 +42,13 @@
 .container-cards-arrows:hover .arrow-left, .container-cards-arrows:hover .arrow-right {
    opacity: 1;
 }
+
+
+@media screen and (max-width: 768px) {
+    .container-cards {
+        padding: 20px 0;
+    }
+    .arrow-right, .arrow-left {
+        opacity: 1;
+    }
+}

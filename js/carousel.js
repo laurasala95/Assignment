@@ -39,63 +39,63 @@ class Carousel {
                 image: "https://picsum.photos/200/300?random=1",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 1',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=2",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 2',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=3",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 3',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=4",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 4',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=5",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 5',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=6",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 6',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=7",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 7',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=8",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 8',
                 cardinality: 'single'
             },
             {
                 image: "https://picsum.photos/200/300?random=9",
                 type: 'video',
                 duration: 3600,
-                title: 'First Title',
+                title: 'Title 9',
                 cardinality: 'single'
             }
         )
@@ -136,26 +136,26 @@ class Carousel {
     arrowListener() {
         // LEFT ARROW
         this.arrowLeft.onclick = () => {
-            this.containerCards.scrollLeft -= 200;
+            this.containerCards.scrollLeft -= 230;
         }
 
         // RIGHT ARROW
         this.arrowRight.onclick = () => {  
             let previousValue = this.containerCards.scrollLeft;
-            this.containerCards.scrollLeft += 200;   
+            this.containerCards.scrollLeft += 230;   
             let nextValue = this.containerCards.scrollLeft; 
         }
     }
 
     // Scroll left
     scrollLeft(){   
-        this.containerCards.scrollLeft-=200;          
+        this.containerCards.scrollLeft-=230;          
     }
 
     // Scroll right
     scrollRight(){    
         let previousValue = this.containerCards.scrollLeft;
-        this.containerCards.scrollLeft+=200;   
+        this.containerCards.scrollLeft+=230;   
         let nextValue = this.containerCards.scrollLeft;   
     }
     
