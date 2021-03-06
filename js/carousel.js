@@ -1,4 +1,5 @@
 class Carousel {
+    // CREATING THE CONSTRUCTOR TO THE DISPLAY THE CAROUSEL
     constructor(options) {
         this.container = options.container;
         this.icon = options.icon;
@@ -9,8 +10,10 @@ class Carousel {
         this.displayCarousel();
         this.fetchCards();
         this.displayCards();
+        this.displayArrowsOnHover();
     }
 
+    // DISPLAYING CAROUSELS
     displayCarousel() {
         const div = document.createElement('div');
         div.className = 'carousel-container';
@@ -23,6 +26,7 @@ class Carousel {
         this.div.appendChild(div);
     }
 
+    // CREATING DATA FOR THE CAROUSEL
     fetchCards() {
         this.cards.push(
             {
@@ -63,6 +67,7 @@ class Carousel {
         )
     }
 
+    // DISPLAYING CARDS WITH FETCHED DATA
     displayCards() {
         const div = document.createElement('div');
         div.className = 'container-cards-arrows';
@@ -92,6 +97,9 @@ class Carousel {
 
         this.div.appendChild(div);
     }
+
+
+    
 }
 
 module.exports = {Carousel};

@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Carousel UI demo page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" type="text/css" href="css/carousel.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -12,7 +14,7 @@
     </head>
 
     <body>
-        <h1>Carousel Demo Page</h1>
+        <h1 class="txt-dark">Carousel Demo Page</h1>
         <div id="myCarousel1"></div>
         <div id="myCarousel2"></div>
 
@@ -20,7 +22,7 @@
             const options1 = {
                 container: 'myCarousel1',
                 icon: 'collections',
-                title: 'Fresh and just uploaded content >',
+                title: 'Fresh and just uploaded content',
                 subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis condimentum nisl a tristique.',
                 fetchCards: function (chunkSize) {
                     // function that returns "chunkSize" card objects to be displayed in the carousel. Each card object is structured as follows:

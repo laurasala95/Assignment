@@ -1,0 +1,15 @@
+/* GENERAL STYLING */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* TEXT STYLING */
+.txt-dark {
+    color: #1d2424;
+}
+.txt-blue {
+    color: #69849b;
+}
+.txt-white {
+    color: #fff;
+}
