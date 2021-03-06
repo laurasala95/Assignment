@@ -40,13 +40,7 @@
                 subtitle: 'Phasellus egestas at diam ut viverra. Curabitur sed turpis faucibus, tempus mauris at.',
                 fetchCards: function (chunkSize) {
                     // function that returns "chunkSize" card objects to be displayed in the carousel. Each card object is structured as follows:
-                    return {
-                        image: 'https://picsum.photos/200/300?random=2',
-                        type: 'news',
-                        duration: 3600,
-                        title: 'Just another title',
-                        cardinality: 'collection'
-                    }
+                    new Carousel(options2);
                 }
             };
             const carousel2 = new Carousel(options2);

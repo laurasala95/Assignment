@@ -2,16 +2,42 @@
 .container-cards {
     display: flex;
     padding: 20px 40px;
-    position: relative;
+    overflow-x: auto;
 }
 .container-cards-arrows {
     display: flex;
     align-items: center;
 }
+.container-cards::-webkit-scrollbar {
+    display: none;
+}
+.container-cards {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* SINGLE CARD STYLING */
+.single-card {
+    margin: 0 1rem;
+    flex-basis: 200px;
+}
 
 /* ARROWS STYLING */
 .arrow-right, .arrow-left {
     opacity: 0;
+    cursor: pointer;
+    background: #69849b;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.arrow-right:hover, .arrow-left:hover, .arrow-right:focus, .arrow-left:focus {
+    background: #3d6a66;
+    outline: none;
+    text-decoration: none;
 }
 .container-cards-arrows:hover .arrow-left, .container-cards-arrows:hover .arrow-right {
    opacity: 1;

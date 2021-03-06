@@ -10,7 +10,13 @@ class Carousel {
         this.displayCarousel();
         this.fetchCards();
         this.displayCards();
-        this.displayArrowsOnHover();
+        this.containerCardsArrows = this.div.querySelector(".container-cards-arrows");
+        this.containerCards = this.div.querySelector(".container-cards");
+        this.arrowRight = this.div.querySelector(".arrow-right");
+        this.arrowLeft = this.div.querySelector(".arrow-left");
+        this.arrowListener();
+        this.scrollRightLoop=null;
+        this.scrollLeftLoop=null;
     }
 
     // DISPLAYING CAROUSELS
@@ -64,6 +70,34 @@ class Carousel {
                 title: 'First Title',
                 cardinality: 'single'
             },
+            {
+                image: "https://picsum.photos/200/300?random=6",
+                type: 'video',
+                duration: 3600,
+                title: 'First Title',
+                cardinality: 'single'
+            },
+            {
+                image: "https://picsum.photos/200/300?random=7",
+                type: 'video',
+                duration: 3600,
+                title: 'First Title',
+                cardinality: 'single'
+            },
+            {
+                image: "https://picsum.photos/200/300?random=8",
+                type: 'video',
+                duration: 3600,
+                title: 'First Title',
+                cardinality: 'single'
+            },
+            {
+                image: "https://picsum.photos/200/300?random=9",
+                type: 'video',
+                duration: 3600,
+                title: 'First Title',
+                cardinality: 'single'
+            }
         )
     }
 
@@ -98,7 +132,32 @@ class Carousel {
         this.div.appendChild(div);
     }
 
+    // HANDLING ARROWS CLICK
+    arrowListener() {
+        // LEFT ARROW
+        this.arrowLeft.onclick = () => {
+            this.containerCards.scrollLeft -= 200;
+        }
 
+        // RIGHT ARROW
+        this.arrowRight.onclick = () => {  
+            let previousValue = this.containerCards.scrollLeft;
+            this.containerCards.scrollLeft += 200;   
+            let nextValue = this.containerCards.scrollLeft; 
+        }
+    }
+
+    // Scroll left
+    scrollLeft(){   
+        this.containerCards.scrollLeft-=200;          
+    }
+
+    // Scroll right
+    scrollRight(){    
+        let previousValue = this.containerCards.scrollLeft;
+        this.containerCards.scrollLeft+=200;   
+        let nextValue = this.containerCards.scrollLeft;   
+    }
     
 }
 
